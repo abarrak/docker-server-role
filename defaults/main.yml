@@ -1,0 +1,17 @@
+---
+# docker tcp socket vars.
+docker_daemon_options:
+  hosts:
+    - "tcp://0.0.0.0:2375"
+    - "unix:///var/run/docker.sock"
+
+# Users to assign to docker group, so they have access to docker server via CLI.
+docker_users: []
+
+# If given, will login automatically to an external container registry.
+registry:
+  enabled: false
+  host: your.private.registry.io
+  username: ""
+  password: ""
+  

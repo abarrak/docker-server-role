@@ -1,10 +1,18 @@
 ---
+- name: Add Docker CE repo
+  ansible.builtin.yum_repository:
+    name: docker-ce-stable
+    description: Docker CE Stable - $basearch
+    file: docker_ce
+    baseurl: https://download.docker.com/linux/{{ (ansible_distribution == 'Fedora') | ternary('fedora','centos') }}/$releasever/$basearch/stable
+    gpgcheck: true
+    gpgkey: https://download.docker.com/linux/{{ (ansible_distribution == 'Fedora') | ternary('fedora','centos') }}/gpg
+
 - name: Install Docker
   ansible.builtin.package:
     name:
-      - docker-ce.x86_64
-      - docker-ce-cli.x86_64
-      - docker-compose-plugin.x86_64
+      - docker-ce
+      - docker-ce-cli
       - container-selinux
       - containerd.io
 

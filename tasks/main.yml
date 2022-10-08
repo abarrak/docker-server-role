@@ -1,3 +1,4 @@
+---
 - name: Install Docker
   ansible.builtin.package:
     name:
@@ -50,8 +51,8 @@
 
 - name: Ensure login for the image registry
   community.docker.docker_login:
-    registry_url: {{ registry.host }}
-    username: {{ registry.username }}
-    password: {{ registry.password }}
+    registry_url: "{{ registry.host }}"
+    username: "{{ registry.username }}"
+    password: "{{ registry.password }}"
     reauthorize: true
-  when: registry.enabled == True
+  when: registry.enabled

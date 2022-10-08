@@ -14,4 +14,3 @@ registry:
   host: your.private.registry.io
   username: ""
   password: ""
-  

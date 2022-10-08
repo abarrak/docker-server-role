@@ -10,8 +10,8 @@
   pre_tasks:
     - name: create testing user
       ansible.builtin.user:
-        name: {{ item }}
-      loop: {{ docker_users }}
+        name: "{{ item }}"
+      loop: "{{ docker_users }}"
 
   roles:
     - role: abarrak.rhel_docker_server

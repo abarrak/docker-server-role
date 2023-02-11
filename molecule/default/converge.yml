@@ -14,7 +14,7 @@
       loop: "{{ docker_users }}"
 
   roles:
-    - role: abarrak.rhel_docker_server
+    - role: abarrak.docker_server_role
 
   post_tasks:
     - name: Verify docker server is running.

@@ -1,5 +1,7 @@
 galaxy_info:
   author: Abdullah Barrak
+  role_name: docker_server_role
+  namespace: abarrak
   description: Ansible role to install and expose docker server on RHEL
   issue_tracker_url: https://github.com/abarrak/docker-server-ansible-role/issues
   license: MIT
@@ -9,18 +11,18 @@ galaxy_info:
   platforms:
     - name: EL
       versions:
-        - 7
-        - 8
-        - 9
+        - "7"
+        - "8"
+        - "9"
     - name: Fedora
       versions:
-        - 30
-        - 31
-        - 32
-        - 33
-        - 34
-        - 35
-        - 36
+        - "30"
+        - "31"
+        - "32"
+        - "33"
+        - "34"
+        - "35"
+        - "36"
 
   galaxy_tags:
     - docker

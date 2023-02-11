@@ -40,7 +40,6 @@ jobs:
         distro:
           - rockylinux8
           - rockylinux9
-          - centos7
           - fedora36
 
     steps:

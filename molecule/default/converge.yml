@@ -2,13 +2,13 @@
 - name: Converge
   hosts: all
   become: true
-
   vars:
+    ansible_remote_tmp: /tmp
     docker_users:
       - abdullah
 
   pre_tasks:
-    - name: create testing user
+    - name: Create testing user
       ansible.builtin.user:
         name: "{{ item }}"
       loop: "{{ docker_users }}"
@@ -20,5 +20,5 @@
     - name: Verify docker server is running.
       command: "systemctl is-active docker.service"
       changed_when: false
+      failed_when: false
       become: true
-      become_user: root

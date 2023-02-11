@@ -21,13 +21,13 @@ Example Playbook
 
 Install the role:
 
-    ansible-galaxy install abarrak.rhel_docker_server
+    ansible-galaxy install abarrak.docker_server_role
 
 Include it to run the setup tasks:
 
     - hosts: docker-server
       import_role:
-        name: abarrak.rhel_docker_server
+        name: abarrak.docker_server_role
 
 License
 -------

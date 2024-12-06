@@ -8,7 +8,7 @@ An ansible role to install standalone docker server on CentOS / RHEL, and expose
 Role Variables
 --------------
 
-The default varibales are defined in `defaults/main.yml`, and should be overriden as convenient.
+The default variables are defined in `defaults/main.yml`, and should be overriden as convenient.
 
 
 Dependencies
